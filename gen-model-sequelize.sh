@@ -1,0 +1,1 @@
+node ./node_modules/.bin/sequelize-auto -h localhost -d api_db -p 3316 -u userdb -x 123456@1 -o "./gen-models" -e mysql

@@ -1,0 +1,19 @@
+version: '2.1'
+
+services:
+  database:
+    image: 'mariadb'
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=api_db
+      - MYSQL_USER=userdb
+      - MYSQL_PASSWORD=123456@1
+    ports:
+      - 3316:3306
+  
+  redis:
+    image: redis
+    ports:
+      - 6370:6379
